@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #######################
-#  AAIS Setup Script  #
+#  PZPL Setup Script  #
 #######################
 
 import os
@@ -12,27 +12,27 @@ import subprocess
 import winreg
 
 ######## GLOBALS #########
-MAINDIR = "m"
-PROJECTDIR = "aais"
+MAINDIR = "pz"
+PROJECTDIR = "pzpl"
 ##########################
 
 def main():
     FULLDIR = "{}\\{}".format(MAINDIR,PROJECTDIR)
     print("""
   ######################################
-  # AAIS Development Environment Setup #
+  # PZPL Development Environment Setup #
   ######################################
 
-  This script will create your AAIS dev environment for you.
+  This script will create your PZPL dev environment for you.
 
   Before you run this, you should already have:
     - A properly setup ACE3 Development Environment
 
   If you have not done those things yet, please abort this script in the next step and do so first.
 
-  This script will create two hard links on your system, both pointing to your AAIS project folder:
-    [Arma 3 installation directory]\\{} => AAIS project folder
-    P:\\{}                              => AAIS project folder
+  This script will create two hard links on your system, both pointing to your PZPL project folder:
+    [Arma 3 installation directory]\\{} => PZPL project folder
+    P:\\{}                              => PZPL project folder
     """.format(FULLDIR,FULLDIR))
     print("\n")
 

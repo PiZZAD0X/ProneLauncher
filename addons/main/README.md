@@ -1,4 +1,4 @@
-aais_main
+pzpl_main
 ========
 
 Backbone of other components, defining most of the commonly used macros.
@@ -8,5 +8,4 @@ Backbone of other components, defining most of the commonly used macros.
 
 The people responsible for merging changes to this component or answering potential questions.
 
-- [TheMagnetar](https://github.com/TheMagnetar)
 - [PiZZADOX](https://github.com/PiZZAD0X)

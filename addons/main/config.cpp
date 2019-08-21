@@ -10,9 +10,10 @@ class CfgPatches {
             "A3_Data_F_Tank_Loadorder",
             // CBA
             "cba_main",
+            "ace_main",
             "cba_xeh"
         };
-        author = ECSTRING(core,AAISTeam);
+        author = ECSTRING(core,PZPLTeam);
         url = CSTRING(URL);
         VERSION_CONFIG;
     };
@@ -20,14 +21,14 @@ class CfgPatches {
 
 class CfgMods {
     class PREFIX {
-        dir = "@aais";
-        name = "Magnetar AI";
+        dir = "@pzpl";
+        name = "Prone Launcher";
         picture = "A3\Ui_f\data\Logos\arma3_expansion_alpha_ca";
         hidePicture = "true";
         hideName = "true";
         actionName = "Website";
         action = CSTRING(URL);
-        description = "Issue Tracker: https://github.com/PiZZAD0X/AAIS/issues";
+        description = "Issue Tracker: https://github.com/PiZZAD0X/PZPL/issues";
     };
 };
 

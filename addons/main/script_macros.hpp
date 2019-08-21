@@ -1,13 +1,12 @@
-#define DEBUG_SYNCHRONOUS
-#include "config_macros.hpp"
+//#define DEBUG_SYNCHRONOUS
 #include "\x\cba\addons\main\script_macros_common.hpp"
 #include "\x\cba\addons\xeh\script_xeh.hpp"
 
 // Default versioning level
 #define DEFAULT_VERSIONING_LEVEL 2
 
-#define DGVAR(varName)    if(isNil "AAIS_DEBUG_NAMESPACE") then { AAIS_DEBUG_NAMESPACE = []; }; if(!(QUOTE(GVAR(varName)) in AAIS_DEBUG_NAMESPACE)) then { PUSH(AAIS_DEBUG_NAMESPACE, QUOTE(GVAR(varName))); }; GVAR(varName)
-#define DVAR(varName)     if(isNil "AAIS_DEBUG_NAMESPACE") then { AAIS_DEBUG_NAMESPACE = []; }; if(!(QUOTE(varName) in AAIS_DEBUG_NAMESPACE)) then { PUSH(AAIS_DEBUG_NAMESPACE, QUOTE(varName)); }; varName
+#define DGVAR(varName)    if(isNil "PZPL_DEBUG_NAMESPACE") then { PZPL_DEBUG_NAMESPACE = []; }; if(!(QUOTE(GVAR(varName)) in PZPL_DEBUG_NAMESPACE)) then { PUSH(PZPL_DEBUG_NAMESPACE, QUOTE(GVAR(varName))); }; GVAR(varName)
+#define DVAR(varName)     if(isNil "PZPL_DEBUG_NAMESPACE") then { PZPL_DEBUG_NAMESPACE = []; }; if(!(QUOTE(varName) in PZPL_DEBUG_NAMESPACE)) then { PUSH(PZPL_DEBUG_NAMESPACE, QUOTE(varName)); }; varName
 #define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
 #define DEFUNC(var1,var2) TRIPLES(DOUBLES(PREFIX,var1),fnc,var2)
 
@@ -34,7 +33,7 @@
 
 #define PREP_MODULE(folder) [] call compile preprocessFileLineNumbers QPATHTOF(folder\__PREP__.sqf)
 
-#define AAIS_DEPRECATED(arg1,arg2,arg3) WARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3",arg1,arg2,arg3)
+#define PZPL_DEPRECATED(arg1,arg2,arg3) WARNING_3("%1 is deprecated. Support will be dropped in version %2. Replaced by: %3",arg1,arg2,arg3)
 
 #define GETMVALUE(var1,var2) getMissionConfigValue [ARR_2(QUOTE(TRIPLES(PREFIX,COMPONENT,var1)),var2)]
 #define EGETMVALUE(var1,var2,var3) getMissionConfigValue [ARR_2(QUOTE(TRIPLES(PREFIX,var1,var2)),var3)]
@@ -96,4 +95,4 @@ if !(EGVAR(Core,Enabled)) exitWith {}
 #define VERSIONNUMBER (EGETMVAR(Version_UpdatedNumber,102))
 #define VERSION_CHECK(var1) if (var1 < VERSIONNUMBER) exitwith {}
 
-#include "script_debug.hpp"
+//#include "script_debug.hpp"

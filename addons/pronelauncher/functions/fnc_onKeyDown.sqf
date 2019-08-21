@@ -29,19 +29,35 @@ if (currentWeapon ACE_player != _launcherWeapon) exitWith {false};
 private _stance = stance ACE_player;
 private _keysMoveDown = actionKeys "moveDown";
 private _keysMoveUp = actionKeys "moveUp";
+private _keysProne = actionKeys "Prone";
+private _keysCrouch = actionKeys "Crouch";
+private _keysStand = actionKeys "Stand";
 
-if (_stance in ["STAND", "CROUCH"] && {_key in _keysMoveDown}) exitWith {
+if (_stance in ["STAND", "CROUCH"] && {(_key in _keysMoveDown) || (_key in _keysProne)}) exitWith {
     ACE_player playMoveNow "ACE_LauncherProne";
     true
 };
 
 if (_stance isEqualTo "PRONE") exitWith {
     if (_key in _keysMoveDown) exitWith {
-        ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon";
+        ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
+        ACE_player playMove "AmovPknlMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon";
         true
     };
     if (_key in _keysMoveUp) exitWith {
         ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
+        true
+    };
+    if (_key in _keysCrouch) exitWith {
+        ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
+        true
+    };
+    if (_key in _keysStand) exitWith {
+        ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
+        ACE_player playMove "AmovPknlMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon";
+        true
+    };
+    if (_key in _keysProne) exitWith {
         true
     };
     false

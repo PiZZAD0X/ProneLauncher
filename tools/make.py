@@ -57,7 +57,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@aais"
+project = "@pzpl"
 project_version = "3.0.0"
 arma3tools_path = ""
 work_drive = ""
@@ -66,11 +66,11 @@ make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "aais"
+key_name = "pzpl"
 key = ""
 dssignfile = ""
-prefix = "aais"
-pbo_name_prefix = "aais_"
+prefix = "pzpl"
+pbo_name_prefix = "pzpl_"
 signature_blacklist = []
 importantFiles = ["mod.cpp", "readme.md", "authors.txt", "license", "logo_ust101_ca.paa", "logo_ust101_over_ca.paa", "logo_ust101_small_ca.paa"]
 versionFiles = ["readme.md", "mod.cpp"]

@@ -1,7 +1,7 @@
 VERSION = $(shell cat "VERSION")
-PREFIX = aais
-BIN = @aais
-ZIP = aais
+PREFIX = PZPL
+BIN = @pzpl
+ZIP = PZPL
 FLAGS = -i include -w redefinition-wo-undef -w unquoted-string
 VERSION_FILES = readme.md mod.cpp
 

@@ -5,8 +5,8 @@ import sys
 import subprocess
 
 ######## GLOBALS #########
-MAINPREFIX = "m"
-PREFIX = "aais_"
+MAINPREFIX = "p"
+PREFIX = "pzpl_"
 ##########################
 
 def mod_time(path):
@@ -32,7 +32,7 @@ def check_for_obsolete_pbos(addonspath, file):
 def main():
     print("""
   ####################
-  # AAIS Debug Build #
+  # PZPL Debug Build #
   ####################
 """)
 

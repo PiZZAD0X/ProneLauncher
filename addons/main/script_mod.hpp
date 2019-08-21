@@ -1,7 +1,7 @@
 // COMPONENT should be defined in the script_component.hpp and included BEFORE this hpp
 
-#define MAINPREFIX m
-#define PREFIX aais
+#define MAINPREFIX pz
+#define PREFIX pzpl
 
 #include "script_version.hpp"
 
@@ -13,7 +13,7 @@
 #define REQUIRED_CBA_VERSION {3,6,0}
 
 #ifdef COMPONENT_BEAUTIFIED
-    #define COMPONENT_NAME QUOTE(AAIS - COMPONENT_BEAUTIFIED)
+    #define COMPONENT_NAME QUOTE(PZPL - COMPONENT_BEAUTIFIED)
 #else
-    #define COMPONENT_NAME QUOTE(AAIS - COMPONENT)
+    #define COMPONENT_NAME QUOTE(PZPL - COMPONENT)
 #endif
